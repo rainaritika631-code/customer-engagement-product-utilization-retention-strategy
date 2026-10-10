@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-data = pd.read_excel("Data/european bank.xlsx")
+data = pd.read_excel("Data/european bank sanitized.xlsx")
 data["ActivityPoints"] = data["IsActiveMember"]
 data["ProductPoints"] = data["NumOfProducts"].apply(
     lambda x: 1 if x >= 2 else 0)
